@@ -29,6 +29,7 @@
 #    CUSTOM SERVER OPTIONS
 #    LOGGING SYSTEM SETTINGS
 #    PACKET SPOOF PROTECTION SETTINGS
+#	 MORPH MASTER CONTROL OPTIONS 
 #
 ###################################################################################################
 
@@ -3133,5 +3134,35 @@ Transmogrification.AllowHeirloom = 1
 Transmogrification.AllowMixedArmorTypes = 0
 Transmogrification.AllowMixedWeaponTypes = 0
 
+#
+###################################################################################################
+
+###################################################################################################
+# MORPH MASTER CONTROL OPTIONS 
+#
+#  
+#    Server.Morpher.Enable
+#      Description: Enable/Disable Morph/Scale Npc.
+#      Default:  1 - (Enabled)
+#                0 - (Disabled)
+ 
+Server.Morpher.Enable = 1
+
+##
+#    Permanent.Morph.Menu.Enable
+#      Description: Enable/Disable Morph Menu.
+#      Default:  1 - (Enabled)
+#                0 - (Disabled)
+ 
+Permanent.Morph.Menu.Enable = 1
+
+##
+#
+#    Permanent.Scale.Menu.Enable
+#      Description: Enable/Disable Scale Menu.
+#      Default:  1 - (Enabled)
+#                0 - (Disabled)
+ 
+Permanent.Scale.Menu.Enable = 1 
 #
 ###################################################################################################

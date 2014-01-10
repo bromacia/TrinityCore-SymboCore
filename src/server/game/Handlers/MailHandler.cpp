@@ -112,6 +112,12 @@ void WorldSession::HandleSendMail(WorldPacket& recvData)
         return;
     }
 
+    if (reqmoney > OLD_MAX_MONEY_AMOUNT)
+    {
+        player->SendMailResult(0, MAIL_SEND, MAIL_ERR_INTERNAL_ERROR);
+        return;
+    }
+
     Player* receiver = ObjectAccessor::FindPlayer(receiverGuid);
 
     uint32 receiverTeam = 0;
@@ -445,6 +451,12 @@ void WorldSession::HandleMailTakeItem(WorldPacket& recvData)
     if (!player->HasEnoughMoney(m->COD))
     {
         player->SendMailResult(mailId, MAIL_ITEM_TAKEN, MAIL_ERR_NOT_ENOUGH_MONEY);
+        return;
+    }
+ 
+    if (m->COD > OLD_MAX_MONEY_AMOUNT)
+    {
+        player->SendMailResult(mailId, MAIL_ITEM_TAKEN, MAIL_ERR_INTERNAL_ERROR);
         return;
     }
 

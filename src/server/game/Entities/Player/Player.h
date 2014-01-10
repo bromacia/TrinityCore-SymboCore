@@ -848,7 +848,8 @@ enum PlayerDelayedOperations
 
 // Player summoning auto-decline time (in secs)
 #define MAX_PLAYER_SUMMON_DELAY                   (2*MINUTE)
-#define MAX_MONEY_AMOUNT                       (0x7FFFFFFF-1)
+#define MAX_MONEY_AMOUNT                        (0xFFFFFFFF) // uint32 max
+#define OLD_MAX_MONEY_AMOUNT                    (0x7FFFFFFF-1) // using to error out things that wont work etc (int32 max -1)
 
 struct InstancePlayerBind
 {
